@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import banner from "./assets/banner.png";
 
 import primecutLogin from "./assets/projects/primecut-login.png";
-import primecutServicos from "./assets/projects/primecut-servicos.png";
 
 import {
   Mail,
@@ -52,7 +51,7 @@ export default function App() {
         "Portfólio moderno desenvolvido em React com visual premium, deploy na Vercel e integração com projetos reais.",
       stack: "React • Vite • Tailwind • Vercel",
       status: "Online",
-      image: primecutServicos,
+      image: banner,
       github: "https://github.com/wallacyramos/portfolio",
       demo: "https://portfolio-blue-pi-58.vercel.app/",
     },
@@ -202,7 +201,7 @@ export default function App() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-52 w-full object-cover rounded-2xl border border-purple-400/20 mb-6 group-hover:scale-[1.02] transition duration-300"
+                  className="h-64 w-full object-contain rounded-2xl border border-purple-400/20 mb-6 bg-black/40 p-4 group-hover:scale-[1.02] transition duration-300"
                 />
 
                 <h3 className="text-2xl font-bold mb-3">
