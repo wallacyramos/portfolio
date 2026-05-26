@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 import banner from "./assets/banner.png";
+
+import primecutLogin from "./assets/projects/primecut-login.png";
+import primecutServicos from "./assets/projects/primecut-servicos.png";
 
 import {
   Mail,
@@ -15,6 +19,7 @@ import {
 } from "lucide-react";
 
 export default function App() {
+
   const whatsapp = "https://wa.me/5511960303909";
 
   const technologies = [
@@ -36,7 +41,7 @@ export default function App() {
         "Sistema completo para barbearias desenvolvido em PHP com autenticação, agendamento, gestão de barbeiros e deploy em nuvem utilizando Railway e GitHub.",
       stack: "PHP • SQLite • JavaScript • HTML • CSS • Railway",
       status: "Online",
-      image: "/src/assets/projects/primecut-login.png",
+      image: primecutLogin,
       github: "https://github.com/wallacyramos/primecut",
       demo: "https://primecut-production.up.railway.app/login.php",
     },
@@ -47,7 +52,7 @@ export default function App() {
         "Portfólio moderno desenvolvido em React com visual premium, deploy na Vercel e integração com projetos reais.",
       stack: "React • Vite • Tailwind • Vercel",
       status: "Online",
-      image: "/src/assets/projects/primecut-servicos.png",
+      image: primecutServicos,
       github: "https://github.com/wallacyramos/portfolio",
       demo: "https://portfolio-blue-pi-58.vercel.app/",
     },
@@ -57,6 +62,7 @@ export default function App() {
     <main className="min-h-screen bg-[#070711] text-white overflow-hidden scroll-smooth">
 
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl">
+
         <div className="max-w-7xl mx-auto px-6 md:px-20 py-4 flex items-center justify-between">
 
           <a href="#" className="text-xl font-black tracking-tight">
@@ -64,6 +70,7 @@ export default function App() {
           </a>
 
           <div className="hidden md:flex items-center gap-8 text-sm text-zinc-300">
+
             <a href="#sobre" className="hover:text-purple-400 transition">
               Sobre
             </a>
@@ -79,6 +86,7 @@ export default function App() {
             <a href="#contato" className="hover:text-purple-400 transition">
               Contato
             </a>
+
           </div>
 
           <a
@@ -91,6 +99,7 @@ export default function App() {
           </a>
 
         </div>
+
       </nav>
 
       <a
@@ -104,11 +113,13 @@ export default function App() {
       </a>
 
       <div className="w-full border-b border-purple-500/20 pt-[72px]">
+
         <img
           src={banner}
           alt="Banner Wallacy Ramos"
           className="w-full h-auto object-cover"
         />
+
       </div>
 
       <section className="relative min-h-screen flex items-center px-6 py-16 md:px-20">
@@ -126,8 +137,10 @@ export default function App() {
           >
 
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-400/30 text-purple-300 mb-6">
+
               <Code2 size={18} />
               Desenvolvedor Web
+
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
@@ -157,36 +170,6 @@ export default function App() {
                 <Phone className="mr-2" size={20} />
                 WhatsApp
               </a>
-
-            </div>
-
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
-
-            <div className="rounded-[2rem] bg-zinc-950/80 border border-purple-400/30 shadow-2xl shadow-purple-900/30 p-6 backdrop-blur hover:shadow-purple-700/40 transition">
-
-              <div className="flex gap-2 mb-5">
-                <span className="w-3 h-3 rounded-full bg-red-400"></span>
-                <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-                <span className="w-3 h-3 rounded-full bg-green-400"></span>
-              </div>
-
-              <pre className="text-sm md:text-base text-zinc-300 leading-7 overflow-hidden">
-                <code>{`<?php
-class Developer {
-  public $nome = "Wallacy Ramos";
-  public $foco = "Sistemas Web";
-
-  public function criarSolucoes() {
-    return "Código limpo, funcional e eficiente";
-  }
-}`}</code>
-              </pre>
 
             </div>
 
